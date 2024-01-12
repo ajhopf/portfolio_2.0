@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="relative max-h-[90vh]">
       <Image
-        className={`${styles.image} h-[80vh] w-auto grayscale hover:grayscale-0 ease-in-out duration-700 ml-4 relative -top-4`}
+        className={`${styles.image} h-[80vh] w-auto grayscale hover:grayscale-0 ease-in-out duration-700 ml-4 relative lg:-top-4`}
         src={andre}
         alt="André Hopf"
       />

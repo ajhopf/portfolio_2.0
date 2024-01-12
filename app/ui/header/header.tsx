@@ -1,12 +1,19 @@
 'use client';
-import Link from 'next/link';
+
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import whiteLogo from './assets/white-logo.png';
 import greenLogo from './assets/green-logo.png';
 import Image from 'next/image';
+import MobileNavBar from './mobile-nav-bar';
+import NavBar from './nav-bar';
 
-const links = [
+export interface navBarLink {
+  title: string;
+  href: string;
+}
+
+const links: navBarLink[] = [
   { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
   { title: 'Projects', href: '/projects' }
@@ -19,26 +26,17 @@ const Header = () => {
     <header
       className={clsx(
         'flex justify-between items-center px-10  h-[10vh] w-screen',
-        { 'absolute z-50': pathname === '/' }
+        { 'lg:absolute lg:z-50': pathname === '/' }
       )}
     >
       <Image className="h-[8vh] w-auto " src={greenLogo} alt="Hopf logo" />
-      <nav>
-        {links.map(link => {
-          return (
-            <Link
-              className={clsx('mx-2 tracking-widest', {
-                'underline underline-offset-8 decoration-2 decoration-green-400':
-                  pathname === link.href
-              })}
-              key={link.title}
-              href={link.href}
-            >
-              {link.title}
-            </Link>
-          );
-        })}
-      </nav>
+
+      <div className="lg:hidden">
+        <MobileNavBar links={links} />
+      </div>
+      <div className="hidden lg:block">
+        <NavBar links={links} />
+      </div>
     </header>
   );
 };
