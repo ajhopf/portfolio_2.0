@@ -31,7 +31,7 @@ const MobileNavBar = ({ links }: { links: navBarLink[] }) => {
 
       <ul
         className={clsx(
-          'absolute z-50 top-[10vh] h-[90vh] 100vw ease-in-out duration-700',
+          'absolute z-50 top-[10vh] h-[90vh] 100vw ease-in-out duration-700 pt-4',
           {
             '-left-[100vh] bg-transparent': !isMobileMenuOpen,
             'left-0 right-0 bg-black': isMobileMenuOpen
@@ -42,7 +42,7 @@ const MobileNavBar = ({ links }: { links: navBarLink[] }) => {
           return (
             <Link
               onClick={handleToggleMobileMenu}
-              className="block text-center hover:text-green-400 text-2xl"
+              className="block text-center hover:text-green-400 text-2xl h-12"
               key={link.title}
               href={link.href}
             >
