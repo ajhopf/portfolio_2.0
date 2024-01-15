@@ -11,6 +11,7 @@ const Home = () => {
         <Image
           className={`${styles.image} max-h-[80vh] w-auto grayscale hover:grayscale-0 ease-in-out duration-700 lg:ml-4 relative lg:-top-4`}
           src={andre}
+          priority={true}
           alt="André Hopf"
         />
       </div>

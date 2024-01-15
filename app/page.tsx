@@ -1,11 +1,7 @@
 import Home from './ui/home/home';
 
 const Page = () => {
-  return (
-    <main>
-      <Home />
-    </main>
-  );
+  return <Home />;
 };
 
 export default Page;
