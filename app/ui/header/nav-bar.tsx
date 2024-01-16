@@ -12,7 +12,7 @@ const NavBar = ({ links }: { links: navBarLink[] }) => {
         {links.map(link => {
           return (
             <Link
-              className={clsx('mx-2 tracking-widest', {
+              className={clsx('mx-2 tracking-widest  hover:text-green-400', {
                 'underline underline-offset-8 decoration-2 decoration-green-400':
                   pathname === link.href
               })}

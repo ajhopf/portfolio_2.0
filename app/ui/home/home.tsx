@@ -1,28 +1,83 @@
 import Image from 'next/image';
-import andre from './andre-hopf.png';
+
+import andre from '../../lib/assets/andre-hopf.png';
 import styles from './home.module.css';
+
+import { technologies, frameworks, databases } from '@/app/lib/data';
+import TechnologyBadge from './technology-badge';
 
 // className="absolute bottom-1/4 right-0 w-1/3"
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center max-h-[90vh]">
-      <div>
-        <Image
-          className={`${styles.image} max-h-[80vh] w-auto grayscale hover:grayscale-0 ease-in-out duration-700 lg:ml-4 relative lg:-top-4`}
-          src={andre}
-          priority={true}
-          alt="André Hopf"
-        />
-      </div>
-      <div className="text-center">
-        <p className="pr-4 text-lg">
-          Hey! I&apos;m
-          <span className="text-green-400"> André Hopf</span>, Full-Stack
-          Developer Based in Florianópolis
-        </p>
-      </div>
-    </div>
+    <>
+      <section className="flex flex-col lg:flex-row lg:justify-center items-center">
+        <div>
+          <Image
+            className={`${styles.image} max-h-[90vh] lg:max-h-[100vh] w-auto grayscale lg:ml-4 relative lg:-top-4`}
+            src={andre}
+            priority={true}
+            alt="André Hopf"
+          />
+        </div>
+        <div className="text-center">
+          <h1 className="pr-4 text-lg">
+            Hey! I&apos;m
+            <span className="text-green-400"> André Hopf</span>, Full-Stack
+            Developer Based in Florianópolis
+          </h1>
+        </div>
+      </section>
+
+      <div
+        style={{
+          height: '2px',
+          width: '80vw',
+          backgroundColor: '#4ade80',
+          margin: '2rem 0 2rem 50%',
+          transform: 'translateX(-50%)'
+        }}
+      ></div>
+
+      <section className="flex flex-col text-center">
+        <div>
+          <h2>Technologies</h2>
+          <ul className="flex flex-wrap justify-center">
+            {technologies.map(tech => (
+              <TechnologyBadge
+                key={tech.title}
+                title={tech.title}
+                src={tech.iconSrc}
+              />
+            ))}
+          </ul>
+        </div>
+        <div className="mt-4">
+          <h2>Frameworks</h2>
+          <ul className="flex flex-wrap justify-center">
+            {frameworks.map(framework => (
+              <TechnologyBadge
+                key={framework.title}
+                title={framework.title}
+                src={framework.iconSrc}
+              />
+            ))}
+          </ul>
+        </div>
+        <div className="mt-4">
+          <h2>Databases</h2>
+          <ul className="flex flex-wrap justify-center">
+            {databases.map(db => (
+              <TechnologyBadge
+                key={db.title}
+                title={db.title}
+                src={db.iconSrc}
+              />
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   );
 };
 

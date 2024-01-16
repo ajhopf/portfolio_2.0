@@ -2,8 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import whiteLogo from './assets/white-logo.png';
-import greenLogo from './assets/green-logo.png';
+import whiteLogo from '../../lib/assets/white-logo.png';
+import greenLogo from '../../lib/assets/green-logo.png';
 import Image from 'next/image';
 import MobileNavBar from './mobile-nav-bar';
 import NavBar from './nav-bar';

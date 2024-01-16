@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { roboto } from './ui/fonts';
 import './globals.css';
-import Header from './ui/header/header';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'André Hopf',
@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className}`}>{children}</body>
+      <body className={`${roboto.className}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
