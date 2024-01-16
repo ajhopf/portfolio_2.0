@@ -1,24 +1,31 @@
 import Image from 'next/image';
 
+import { Skeleton } from '@nextui-org/react';
+
 import andre from '../../lib/assets/andre-hopf.png';
 import styles from './home.module.css';
 
 import { technologies, frameworks, databases } from '@/app/lib/data';
 import TechnologyBadge from './technology-badge';
+import { Suspense } from 'react';
 
 // className="absolute bottom-1/4 right-0 w-1/3"
+
+const imageSkeleton = <Skeleton className="flex rounded-full w-12 h-12" />;
 
 const Home = () => {
   return (
     <>
       <section className="flex flex-col lg:flex-row lg:justify-center items-center">
         <div>
-          <Image
-            className={`${styles.image} max-h-[90vh] lg:max-h-[100vh] w-auto grayscale lg:ml-4 relative lg:-top-4`}
-            src={andre}
-            priority={true}
-            alt="André Hopf"
-          />
+          <Suspense fallback={imageSkeleton}>
+            <Image
+              className={`${styles.image} max-h-[90vh] lg:max-h-[100vh] w-auto grayscale lg:ml-4 relative lg:-top-4`}
+              src={andre}
+              priority={true}
+              alt="André Hopf"
+            />
+          </Suspense>
         </div>
         <div className="text-center">
           <h1 className="pr-4 text-lg">
