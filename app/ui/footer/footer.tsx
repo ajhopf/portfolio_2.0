@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={`'w-[100vw] h-[40vh] lg:h-[50vh] mt-[3rem]`}>
       <div
-        className={`${styles.contact} h-[30vh] lg:h-[40vh] bg-center bg-cover flex align-center`}
+        className={`${styles['image-container']} h-[30vh] lg:h-[40vh] bg-center bg-cover flex align-center`}
       >
         <div className="flex flex-col justify-end items-end grow m-3">
           <Link href="https://www.linkedin.com/in/andre-hopf/">

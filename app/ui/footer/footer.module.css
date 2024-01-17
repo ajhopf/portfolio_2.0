@@ -1,8 +1,4 @@
-.contact {
+.image-container {
   background-image: url('../../lib/assets/wave.jpg');
   filter: grayscale(100%);
 }
-
-/* .contact:hover {
-  filter: grayscale(50%)
-} */
