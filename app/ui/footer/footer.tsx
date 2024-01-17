@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="flex flex-col justify-end items-end grow m-3">
           <Link href="https://www.linkedin.com/in/andre-hopf/">
             <Image
-              src="https://img.icons8.com/ios-filled/50/linkedin.png"
+              src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"
               alt="linkedin"
             />
           </Link>
-          <Link href="https://www.linkedin.com/in/andre-hopf/">
+          <Link href="https://www.github.com/ajhopf/">
             <Image
-              src="https://img.icons8.com/ios-filled/50/github.png"
+              src="https://img.icons8.com/ios-filled/50/FFFFFF/github.png"
               alt="github"
             />
           </Link>
@@ -34,6 +34,12 @@ const Footer = () => {
           }}
         ></div>
         <p>2024</p>
+        <Link
+          href="https://icons8.com"
+          className="no-underline text-green-100 absolute pt-12 right-2 text-xs"
+        >
+          Icons by Icons8
+        </Link>
       </div>
     </footer>
   );
