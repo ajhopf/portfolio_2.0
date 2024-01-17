@@ -1,8 +1,9 @@
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import TransitionPage from './ui/transition/transition-page';
 import Header from './ui/header/header';
+import Footer from './ui/footer/footer';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const [showPage, setShowPage] = useState(false);
@@ -19,6 +20,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     >
       <Header />
       {children}
+      <Footer />
     </motion.main>
   );
 

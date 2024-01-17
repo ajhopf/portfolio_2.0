@@ -11,7 +11,7 @@ const TechnologyBadge = ({ title, src }: { title: string; src: string }) => {
       content={title}
     >
       <Image
-        className="grayscale hover:grayscale-0 h-20 w-auto m-1"
+        className="grayscale hover:grayscale-0 h-14 w-auto m-1"
         width={100}
         height={100}
         src={src}

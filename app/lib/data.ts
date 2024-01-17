@@ -11,21 +11,24 @@ export const technologies: tech[] = [
 
   },
   {
+    title: 'Java',
+    iconSrc: 'https://img.icons8.com/color/100/java-coffee-cup-logo--v1.png'
+  },
+  {
     title: 'Git',
     iconSrc: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
-
-  },
-
-  {
-    title: 'CSS',
-    iconSrc:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg',
 
   },
   {
     title: 'Node',
     iconSrc:
-      'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg',
+      'https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-nodejs-is-an-open-source-cross-platform-javascript-run-time-environment-logo-color-tal-revivo.png',
+
+  },
+  {
+    title: 'CSS',
+    iconSrc:
+      'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg',
 
   }
 ];
@@ -76,8 +79,13 @@ export const databases: tech[] = [
 
   },
   {
-    title: 'Oracle',
+    title: 'OracleDB',
     iconSrc:
       'https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg'
+  },
+  {
+    title: 'Firebase',
+    iconSrc:
+      'https://img.icons8.com/color/100/firebase.png'
   }
 ];
