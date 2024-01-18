@@ -77,7 +77,7 @@ const About = () => {
         </div>
       </section>
 
-      <p>
+      {/* <p>
         Desenvolvedor com experiência utilizando React e Angular para o frontend
         e Node.js e Java (Spring) para o backend. Possuo familiaridade com
         bancos de dados relacionais (DB Oracle utilizando a linguagem PL/SQL) e
@@ -92,7 +92,7 @@ const About = () => {
         também na minha interação com outras pessoas. Em busca de educação
         contínua, em outubro de 2023 iniciei uma nova graduação em Ciência da
         Computação com ênfase em Dev Fullstack na faculdade Descomplica.
-      </p>
+      </p> */}
     </>
   );
 };
